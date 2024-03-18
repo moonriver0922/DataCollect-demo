@@ -32,12 +32,14 @@
 
    文件结构如下：
 
+   ```shell
    .
    ├── README.md
    ├── conf.yaml
    ├── logger.py
    ├── main.py
    └── requirements.txt
+   ```
 
    执行命令：
 
