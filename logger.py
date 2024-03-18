@@ -2,7 +2,6 @@
 """global logger config
 """
 import logging
-import datetime
 import yaml
 
 
