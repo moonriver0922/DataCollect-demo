@@ -25,6 +25,3 @@
    ```python
    python main.py
    ```
-
-   
-
