@@ -2,8 +2,8 @@ from pymongo import MongoClient
 import json
 import os
 
-def export_collection_to_file(database_name, collection_name, output_file_path):
-    client = MongoClient('localhost', 27017)
+def export_collection_to_file(database_name, collection_name, output_file_path, ip):
+    client = MongoClient(f"mongodb://tagsys:tagsys@{ip}:27017/")
     db = client[database_name]
     collection = db[collection_name]
 
@@ -21,4 +21,4 @@ if not os.path.exists(output_dir_path):
     os.makedirs(output_dir_path)
 for collection_name in collections:
     output_file_path = f"{output_dir_path}/{collection_name}.json"
-    export_collection_to_file(database_name, collection_name, output_file_path)
+    export_collection_to_file(database_name, collection_name, output_file_path, ip="158.132.255.174")
