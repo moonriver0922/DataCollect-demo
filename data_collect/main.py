@@ -6,7 +6,7 @@ import json
 import threading
 import pika
 from pymongo import MongoClient
-from logger import logger
+from data_collect.logger import logger
 import time
 
 
