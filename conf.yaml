@@ -1,5 +1,5 @@
 db:
-  collection: test
+  collection: BlockR_setting2
   database: LocGPT
   devices:
   - gateway1

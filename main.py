@@ -12,7 +12,7 @@ import time
 
 # gateways info
 counts = 0
-num_packets = 110000
+num_packets = 200000
 gateways = {f"gateway{i+1}" : 0 for i in range(4)}
 
 
