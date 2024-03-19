@@ -63,3 +63,8 @@
 2024-03-19 11:58:38,327 - server - INFO - Start listening gateway2
 2024-03-19 11:58:38,328 - server - INFO - Start listening gateway3
 2024-03-19 11:58:38,328 - server - INFO - Start listening gateway4
+2024-03-19 13:05:14,436 - server - INFO - Create collection test
+2024-03-19 13:05:14,661 - server - INFO - Start listening gateway1
+2024-03-19 13:05:14,662 - server - INFO - Start listening gateway2
+2024-03-19 13:05:14,662 - server - INFO - Start listening gateway3
+2024-03-19 13:05:14,662 - server - INFO - Start listening gateway4
