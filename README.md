@@ -10,7 +10,9 @@
 
 2. 启动程序
 
-   <u>macOS</u>
+   macOS
+
+   ------
 
    如果没有python，先安装python：
 
