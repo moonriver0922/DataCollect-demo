@@ -38,7 +38,7 @@
 
    安装成功后执行：
 
-   将*"your scenario's name"*替换成采集场景即可
+   将*your scenario's name*替换成采集场景即可
 
    ```python
    python main.py --collection "your scenario's name"
