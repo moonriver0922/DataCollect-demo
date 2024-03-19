@@ -12,6 +12,7 @@ import time
 
 # gateways info
 counts = 0
+num_packets = 110000
 gateways = {f"gateway{i+1}" : 0 for i in range(4)}
 
 
@@ -57,8 +58,10 @@ class MsgWorker(threading.Thread):
 
 
     def callback(self, ch, method, properties, body):
+
         global gateways
         global counts
+        global num_packets
         if self.stop_flag:
             self.channel.stop_consuming()
 
@@ -75,6 +78,8 @@ class MsgWorker(threading.Thread):
                 self.batch.clear()
                 counts += self.batchsize
                 logger.debug(f"Received {counts} samples. {list(gateways.values())}")
+            if gateways[self.queue_rb] > num_packets:
+                self.stop()
 
 
 class DataCollect(object):

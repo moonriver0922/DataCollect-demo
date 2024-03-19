@@ -1,30 +1,26 @@
-## Message queue settings
-mq:
-  ip: 158.132.255.177
-  port: 5672
-  user: tagsys
-  password: "123456"
-  exchange: direct_gateway
-  queue_gateway:
-    - "gateway1"
-    - "gateway2"
-    - "gateway3"
-    - "gateway4"
-  queue_lidar:
-    - "lidar"
-  queue_imu:
-    - "imu"
-
 db:
-  database: "LocGPT"
-  ip: "158.132.255.174"
-  collection: "BlockQ_left"
+  collection: test
+  database: LocGPT
   devices:
-    - "gateway1"
-    - "gateway2"
-    - "gateway3"
-    - "gateway4"
-    - "lidar"
-    - "imu"
-
-
+  - gateway1
+  - gateway2
+  - gateway3
+  - gateway4
+  - lidar
+  - imu
+  ip: 158.132.255.174
+mq:
+  exchange: direct_gateway
+  ip: 158.132.255.177
+  password: '123456'
+  port: 5672
+  queue_gateway:
+  - gateway1
+  - gateway2
+  - gateway3
+  - gateway4
+  queue_imu:
+  - imu
+  queue_lidar:
+  - lidar
+  user: tagsys

@@ -3,12 +3,14 @@
 """
 import logging
 import yaml
+import argparse
 
 
 class SpecificLogFilter(logging.Filter):
     def filter(self, record):
         # Only log messages containing 'specific' in the message
         return 'timestamp' in record.getMessage()
+
 
 def logger_config(log_savepath,logging_name):
     '''logger config
@@ -41,11 +43,18 @@ def logger_config(log_savepath,logging_name):
     return logger
 
 
-# now = datetime.now()
-# log_filename = now.strftime("%Y-%m-%d_%H-%M-%S.log")
 with open("conf.yaml") as f:
     kwargs = yaml.safe_load(f)
     f.close()
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--collection', type=str, default=kwargs['db']['collection'], help='scenario\'s name')
+args = parser.parse_args()
+kwargs['db']['collection'] = args.collection
+
+with open('conf.yaml', 'w') as f:
+    yaml.dump(kwargs, f)
+
 log_filename = f"{kwargs['db']['collection']}.log"
 log_savepath = f'log/{log_filename}'
 logger = logger_config(log_savepath=log_savepath, logging_name='server')
