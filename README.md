@@ -50,5 +50,5 @@
    安装成功后执行：
 
    ```python
-   python main.py
+   python main.py --collection "your scenario's name"
    ```
