@@ -8,7 +8,9 @@
 
    ![851710772844_.pic](https://img.xwyue.com/i/2024/03/18/65f852d70f15b.jpg)
 
-2. 启动程序**（For macOS）**
+2. 启动程序
+
+   <u>macOS</u>
 
    如果没有python，先安装python：
 
