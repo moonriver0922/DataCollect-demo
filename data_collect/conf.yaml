@@ -1,5 +1,5 @@
 db:
-  collection: BlockR_setting2
+  collection: BlockP_leftbehind_setting2
   database: LocGPT
   devices:
   - gateway1
